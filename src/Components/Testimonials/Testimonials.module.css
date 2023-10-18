@@ -3,6 +3,12 @@
     border-radius: 32px;
 }
 
+.content img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
 .card h5{
     color: #6D91EE;
     font-weight: 700;
@@ -16,4 +22,15 @@
 
 .card i{
     color: #6D91EE;
+}
+
+.btnPagination:focus{
+    box-shadow: none !important;
+}
+
+.customLink{
+    cursor: pointer;
+    font-size: 14px;
+    color: #22366A;
+    text-decoration: none;
 }
