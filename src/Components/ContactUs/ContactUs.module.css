@@ -1,0 +1,41 @@
+.formControlCustom{
+    border: none;
+    background-color: #CEDCFF;
+    padding: 8px 20px;
+}
+
+.formControlCustom:focus{
+    border: none;
+    background-color: #CEDCFF;
+    box-shadow: none;
+}
+
+.formControlCustom::placeholder{
+    font-size: 12px;
+    color: #000;
+}
+
+.btnSend{
+    background-color: transparent;
+    border: 2px solid #5180F6;
+}
+
+.btnSend:hover{
+    background-color: #5180F6;
+    border: 2px solid #5180F6;
+}
+
+.btnSend:active{
+    border: 2px solid #5180F6 !important;
+}
+
+
+.customLink{
+    cursor: pointer;
+    font-size: small;
+    text-decoration: none;
+}
+
+.iconColor{
+    color: #5180F6;
+}

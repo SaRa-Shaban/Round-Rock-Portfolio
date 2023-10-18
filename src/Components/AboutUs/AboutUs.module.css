@@ -1,0 +1,48 @@
+.bg1 {
+    /* height: 100vh; */
+    background-image: url(../../assets/AboutUs/bg1.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg2 {
+    /* height: 100vh; */
+    background-image: url(../../assets/AboutUs/bg2.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1025px) {
+    .bg2 {
+        background-size: cover;
+        /* height: 93vh; */
+    }
+}
+
+
+.helpBtn button {
+    background-color: #EEC04B;
+    color: #515151;
+}
+
+.contentRight h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contentRight p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.contentLeft h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.contentLeft p {
+    font-weight: 600;
+    font-size: 15px;
+}

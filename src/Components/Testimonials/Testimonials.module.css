@@ -1,0 +1,19 @@
+.content{
+    border: 1px solid #6D91EE;
+    border-radius: 32px;
+}
+
+.card h5{
+    color: #6D91EE;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.card p{
+    font-size: 12px;
+    color: #22366A;
+}
+
+.card i{
+    color: #6D91EE;
+}
