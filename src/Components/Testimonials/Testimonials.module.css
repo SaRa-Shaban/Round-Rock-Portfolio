@@ -1,5 +1,7 @@
-.content{
-    border: 1px solid #6D91EE;
+@import '../../index.css';
+
+.content {
+    border: 1px solid var(--primary-color);
     border-radius: 32px;
 }
 
@@ -9,28 +11,34 @@
     border-radius: 50%;
 }
 
-.card h5{
-    color: #6D91EE;
+.card h5 {
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 16px;
 }
 
-.card p{
+.card p {
     font-size: 12px;
     color: #22366A;
 }
 
-.card i{
-    color: #6D91EE;
+.card i {
+    color: var(--primary-color);
 }
 
 .btnPagination:focus{
     box-shadow: none !important;
 }
 
-.customLink{
+.customLink {
     cursor: pointer;
     font-size: 14px;
     color: #22366A;
     text-decoration: none;
+}
+
+.disabledButton,
+.disabledButton:hover {
+    background-color: #ccc;
+    color: #666;
 }

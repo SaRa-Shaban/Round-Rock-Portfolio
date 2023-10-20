@@ -1,12 +1,14 @@
-.formControlCustom{
+.formControlCustom,
+.formControlCustom:focus{
     border: none;
     background-color: #CEDCFF;
+}
+
+.formControlCustom{
     padding: 8px 20px;
 }
 
 .formControlCustom:focus{
-    border: none;
-    background-color: #CEDCFF;
     box-shadow: none;
 }
 
@@ -17,16 +19,16 @@
 
 .btnSend{
     background-color: transparent;
-    border: 2px solid #5180F6;
+    border: 2px solid  var(--secondary-color);
 }
 
 .btnSend:hover{
-    background-color: #5180F6;
-    border: 2px solid #5180F6;
+    background-color:  var(--secondary-color);
+    border: 2px solid  var(--secondary-color);
 }
 
 .btnSend:active{
-    border: 2px solid #5180F6 !important;
+    border: 2px solid  var(--secondary-color) !important;
 }
 
 
@@ -37,5 +39,5 @@
 }
 
 .iconColor{
-    color: #5180F6;
+    color:  var(--secondary-color);
 }

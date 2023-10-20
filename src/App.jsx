@@ -9,11 +9,6 @@ import Services from "./Components/Services/Services";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Navbar from "./Components/Navbar/Navbar";
-import { QueryClient, QueryClientProvider } from "react-query";
-
-// Create a client
-const queryClient = new QueryClient()
-
 
 function App() {
   return (
@@ -21,10 +16,7 @@ function App() {
       <Home />
       <AboutUs />
       <Services />
-      {/*  Provide the client to your App */}
-      <QueryClientProvider client={queryClient}>
-        <Testimonials />
-      </QueryClientProvider>
+      <Testimonials />
       <ContactUs />
       <Navbar />
     </>

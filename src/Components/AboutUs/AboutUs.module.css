@@ -1,5 +1,4 @@
 .bg1 {
-    /* height: 100vh; */
     background-image: url(../../assets/AboutUs/bg1.png);
     background-size: 100% 100%;
     background-position: center;
@@ -7,7 +6,6 @@
 }
 
 .bg2 {
-    /* height: 100vh; */
     background-image: url(../../assets/AboutUs/bg2.png);
     background-size: contain;
     background-position: right;
@@ -27,22 +25,14 @@
     color: #515151;
 }
 
-.contentRight h2 {
-    font-weight: 900;
-    font-size: 40px;
-}
-
-.contentRight p {
-    font-weight: 600;
-    font-size: 15px;
-}
-
+.contentRight h2,
 .contentLeft h2 {
     font-weight: 900;
     font-size: 40px;
 }
 
-.contentLeft p {
+.contentLeft p ,
+.contentRight p{
     font-weight: 600;
     font-size: 15px;
 }

@@ -1,79 +1,76 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --primary-color: #6D91EE;
+  --secondary-color: #5180F6;
+}
 
-  .globalContainer{
-    width: 70%;
-    margin: auto;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-  .sectionTitle h2{
-    color: #6D91EE;
-    font-weight: 900;
-  }
+.globalContainer {
+  width: 70%;
+  margin: auto;
+}
 
-  .sectionTitle:after {
-    content: "";
-    position:absolute;
-    margin:-20px;
-    width:30px;
-    height:30px;
-    transform:rotate(45deg);
-    border-top: solid 2px #6D91EE;
-    background-color:transparent; /* to see where it is */
-  }
+.sectionTitle h2{
+  color:  var(--primary-color);
+  font-weight: 900;
+}
 
-  .sectionTitle::before {
-    content: "";
-    position:absolute;
-    left: 0;
-    margin:-20px;
-    width:30px;
-    height:30px;
-    transform:rotate(135deg);
-    border-top: solid 2px #6D91EE;
-    background-color:transparent; /* to see where it is */
-  }
+.sectionTitle::after,
+.sectionTitle::before,
+.opposite::after,
+.opposite::before {
+  content: "";
+  position: absolute;
+  margin: -20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
 
-  
-  .opposite:after {
-    content: "";
-    position:absolute;
-    right: 0;
-    margin:-20px;
-    width:30px;
-    height:30px;
-    transform:rotate(45deg);
-    border-bottom: solid 2px #6D91EE;
-    background-color:transparent; /* to see where it is */
-  }
+.sectionTitle::after,
+.sectionTitle::before{
+  border-top: solid 2px  var(--primary-color);
+
+}
+
+.opposite::after,
+.opposite::before{
+  right: 0;
+}
+
+.opposite::after,
+.opposite::before,
+.sectionTitle:after {
+  transform: rotate(45deg);
+}
 
 
+.sectionTitle::before {
+  left: 0;
+  transform: rotate(135deg);
+}
 
-  .opposite::before {
-    content: "";
-    position:absolute;
-    right: 0;
-    bottom: 8px;
-    margin:-20px;
-    width:30px;
-    height:30px;
-    transform:rotate(45deg);
-    border-left: solid 2px #6D91EE;
-    background-color:transparent; /* to see where it is */
-  }
+.opposite:after {
+  border-bottom: solid 2px  var(--primary-color);
+}
 
-  .btn-help{
-    background-color: #5180F6;
-    padding: 25px 70px;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 50px;
-  }
+.opposite::before {
+  bottom: 8px;
+  border-left: solid 2px  var(--primary-color);
+}
 
+.btn-help {
+  background-color:  var(--secondary-color);
+  padding: 25px 70px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50px;
+}
 

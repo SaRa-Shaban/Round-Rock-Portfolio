@@ -1,3 +1,5 @@
+@import '../../index.css'; 
+
 .bg {
     /* height: 100vh; */
     background-image: url(../../assets//Home//bgHome.png);
@@ -19,7 +21,7 @@
 .homeTitle h3 {
     font-weight: 300;
     font-size: 30px;
-    color: #6D91EE;
+    color:  var(--primary-color);
     line-height: 20px;
     letter-spacing: 8px;
 
@@ -29,15 +31,11 @@
     letter-spacing: 10px;
     font-weight: 800;
     font-size: 15px;
-    color: #6D91EE;
+    color:  var(--primary-color);
 }
 
-/* .containerHome{
-    height: 100vh;
-} */
-
 .btnExperts {
-    background-color: #5180F6;
+    background-color:  var(--secondary-color);
     padding: 8px 28px;
     font-weight: 500;
     color: #fff;
@@ -46,13 +44,11 @@
 
 .homeContent h1 {
     font-weight: 900;
-    /* font-size: 60px; */
     font-size: 4.6vw;
     color: #4F4F4F;
 }
 
 .homeContent h2 {
-    /* font-size: 60px; */
     font-size: 4.6vw;
     color: #4F4F4F;
     font-weight: 100;
