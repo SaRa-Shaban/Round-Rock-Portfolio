@@ -22,7 +22,7 @@ export default function Testimonials() {
 
   const { data, isLoading } = useQuery(["users", page], getTestimonials);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <>

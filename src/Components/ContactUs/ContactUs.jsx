@@ -4,8 +4,11 @@ import axios from "axios";
 import { useMutation } from "react-query";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { toast } from 'react-toastify';
 
 export default function ContactUs() {
+  // const notify = (msg, type) => toast[type](msg);
+
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -25,15 +28,26 @@ export default function ContactUs() {
       axios.post("http://upskilling-egypt.com:3000/contact", newData),
     {
       onSuccess: (response) => {
-        console.log("Success:", response.data);
+        // console.log("Success:", response.data);
         // clear data from iputs
         formik.resetForm();
+       // Show success notification
+       toast.success("Message sent successfully  😃", {
+        position: "top-right",
+      });
+      },
+      onError: (error) => {
+        // console.error("Error:", error);
+        toast.error("Failed! Please try again. 😞", {
+          position: "top-right",
+        });
       },
       onSettled: () => {
         if (status === "success") {
           formik.resetForm();
         }
       },
+      
     }
   );
 
@@ -73,7 +87,12 @@ export default function ContactUs() {
                 />
 
                 {formik.errors.name && formik.touched.name && (
-                  <div className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5 " role="alert">{formik.errors.name}</div>
+                  <div
+                    className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5 "
+                    role="alert"
+                  >
+                    {formik.errors.name}
+                  </div>
                 )}
 
                 <input
@@ -86,7 +105,12 @@ export default function ContactUs() {
                 />
 
                 {formik.errors.email && formik.touched.email && (
-                  <div className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5" role="alert">{formik.errors.email}</div>
+                  <div
+                    className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5"
+                    role="alert"
+                  >
+                    {formik.errors.email}
+                  </div>
                 )}
 
                 <input
@@ -99,16 +123,25 @@ export default function ContactUs() {
                 />
 
                 {formik.errors.phone && formik.touched.phone && (
-                  <div className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5" role="alert">{formik.errors.phone}</div>
+                  <div
+                    className="alert alert-danger mt-2 mb-3 p-2 text-center rounded-5"
+                    role="alert"
+                  >
+                    {formik.errors.phone}
+                  </div>
                 )}
 
                 <div className="d-flex justify-content-center align-items-center">
                   <button
                     type="submit"
                     className={`btn rounded-5 px-5 text-black ${style.btnSend} my-3`}
-                    disabled={status === 'loading'}
+                    disabled={status === "loading"}
                   >
-                    {status === 'loading' ? <i className="fa-solid fa-spinner fa-spin-pulse text-black fa-1x"></i>  : 'Send'}
+                    {status === "loading" ? (
+                      <i className="fa-solid fa-spinner fa-spin-pulse text-black fa-1x"></i>
+                    ) : (
+                      "Send"
+                    )}
                   </button>
                 </div>
               </form>
